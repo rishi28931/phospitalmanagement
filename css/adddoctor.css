@@ -2,7 +2,8 @@
 	height:50%;
 	width:50%;
 	box-shadow: 4px 2px #eee;
-	transition: width 1s
+	transition: width 1s;
+	
 	
 }
 .form-control:hover{

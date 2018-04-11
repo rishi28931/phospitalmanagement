@@ -10,35 +10,49 @@
 
     <title>Hello, world!</title>
     <link rel="stylesheet" href="../css/adddoctor.css" type=text/css>
+    <script>  
+function validateform(){  
+var name=document.myform.name.value;  
+var password=document.myform.password.value;  
+  
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }  
+}  
+</script>  
   </head>
   <body>
     <div class="container-fluid " > </div>
       <div class="main"> 
-               <form action ="#" >
+               <form action ="#" name="myform" >
         <legend><strong>ADD DOCTOR</strong></legend>
         <div class="form-group">
           <label for="name"><big> Name</big> </label>
-        <input type="text" class="form-control" class="active" name="name" placeholder="enter ur name" id="name">
+        <input type="text" class="form-control active" name="name" placeholder="enter ur name" id="name" required>
         </div>
         <div class="form-group">
           <label for="age"><big>AGE </big></label>
-        <input type="number" class="form-control" name="age" placeholder="enter ur age" id="age">
+        <input type="number" class="form-control" name="age" placeholder="enter ur age" id="age" required>
         </div>
         <div class="form-group">
           <label for="phoneno"><big> PHONE NO:</big> </label>
-        <input type="number" class="form-control" name="phoneno" placeholder="enter ur phone no" id="phoneno">
+        <input type="number" class="form-control" name="phoneno" placeholder="enter ur phone no" id="phoneno" required>
         </div>
         <div class="form-group">
           <label for="bg"><big>BLOOD GROUP</big> </label>
-        <input type="text" class="form-control" name="bg" placeholder="enter ur blood group" id="bg">
+        <input type="text" class="form-control" name="bg" placeholder="enter ur blood group" id="bg" required>
         </div>
         <div class="form-group">
           <label for ="ql"><big>QUALIFICATIONS</big></label>
-          <input type ="text " class="form-control " name ="ql" placeholder="enter qualifications" id="ql">
+          <input type ="text " class="form-control " name ="ql" placeholder="enter qualifications" id="ql" required>
         </div>
         <div class="form-group">
           <label for ="fs"><big>Field of specialisation</big></label>
-          <input type ="text " class="form-control " name ="ql" placeholder="specialist of :" id="ql">
+          <input type ="text " class="form-control " name ="ql" placeholder="specialist of :" id="fs" required>
         </div>
 
         <label for="gender"><big>GENDER:</big></label> 
@@ -52,14 +66,14 @@
         
         <div class="form-group">
           <label for="address"> <big>Address</big> </label>
-           <textarea type="text" name="address" id="address" placeholder="enter ur address">
+           <textarea type="text" name="address" id="address" placeholder="enter ur address" required>
             </textarea>
         </div>
         <div class="form-group">
           <label for="date"><big> DATE</big></label>
-        <input type="date" class="form-control" id="date">
+        <input type="date" class="form-control" id="date" required>
         </div>
-        <button type="submit" class="btn btn-md btn-danger">Submit</button>
+        <button type="submit" onclick ="validateform()" class="btn btn-md btn-danger">Submit</button>
         </form>
         
       </div>
