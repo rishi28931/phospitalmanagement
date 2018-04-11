@@ -1,0 +1,30 @@
+ .form-control{
+	height:50%;
+	width:50%;
+	box-shadow: 4px 2px #eee;
+	transition: width 1s
+	
+}
+.form-control:hover{
+	
+	background-color: cyan;
+	width:80%;
+
+	
+}
+*{
+	background-color:#fff;
+}
+.main{
+	 margin:50px auto;
+	height: auto;
+	width: 50%;
+	padding: 2%;
+	box-shadow: 8px 5px #eee;
+	border: 2px solid #ccc;
+}
+#get{
+	background-color: red;
+	height: 500px;
+	width: 500px;
+}
